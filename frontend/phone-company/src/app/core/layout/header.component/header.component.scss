@@ -1,0 +1,62 @@
+@use '../../../../styles/fonts' as fonts;
+@use '../../../../styles/colors' as colors;
+
+.header {
+  max-width: 1438px;
+  max-height: 112px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: colors.$brand-background-soft;
+
+  &__container {
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: center;
+    max-width: 1238px;
+    max-height: 40px;
+    display: flex;
+    gap: 617px;
+  }
+
+  &__logo {
+    max-width: 190px;
+    max-height: 40px;
+  }
+
+  &__actions {
+    display: inline-flex;
+    max-width: 431px;
+    max-height: 36;
+    align-items: center;
+    gap: 60px;
+  }
+
+  &__nav-list {
+    display: inline-flex;
+    list-style: none;
+    gap: 30px;
+  }
+
+  &__nav-item {
+    font-family: fonts.$font-roboto;
+    font-weight: fonts.$font-weight-bold;
+    font-size: fonts.$font-size-small;
+    letter-spacing: -0.3px;
+    color: colors.$text-title;
+  }
+
+  &__button {
+    width: 90px;
+    height: 36px;
+    color: colors.$gray-line;
+    background-color: colors.$brand-primary;
+    font-size: fonts.$font-size-small;
+    font-weight: fonts.$font-weight-bold;
+    font-family: fonts.$font-roboto;
+    letter-spacing: -0.3px;
+    border: none;
+    border-radius: 6px;
+    box-shadow: 2px 3px 20px 2px colors.$brand-primary;
+  }
+}

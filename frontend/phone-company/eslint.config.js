@@ -13,7 +13,7 @@ import prettierConfig from 'eslint-config-prettier';
 
 export default [
   {
-    ignores: ['node_modules/*', 'dist/*', 'coverage/*'],
+    ignores: ['projects/**/*', 'node_modules/*', 'dist/*', 'coverage/*', '.storybook/**/*'],
   },
   {
     files: ['src/**/*.ts'],

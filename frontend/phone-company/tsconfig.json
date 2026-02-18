@@ -15,19 +15,19 @@
     "moduleResolution": "bundler",
     "importHelpers": true,
     "target": "ES2022",
-    "module": "ES2022"
+    "module": "ES2022",
+    "paths": {
+      "~core/*": ["app/core/*"],
+      "~features/*": ["app/features/*"],
+      "~shared/*": ["app/shared/*"],
+      "~/*": ["app/*"]
+    }
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,
     "strictInjectionParameters": true,
     "strictInputAccessModifiers": true,
     "strictTemplates": true
-  },
-  "paths": {
-    "~core/*": [".app/core/*"],
-    "~features/*": [".app/features/*"],
-    "~shared/*": [".app/shared/*"],
-    "~/*": ["./app/*"]
   },
   "files": [],
   "references": [
