@@ -16,7 +16,7 @@
     max-width: 1238px;
     max-height: 40px;
     display: flex;
-    gap: 617px;
+    gap: 697px;
   }
 
   &__logo {
@@ -29,7 +29,7 @@
     max-width: 431px;
     max-height: 36;
     align-items: center;
-    gap: 60px;
+    gap: 50px;
   }
 
   &__nav-list {
@@ -41,7 +41,7 @@
   &__nav-item {
     font-family: fonts.$font-roboto;
     font-weight: fonts.$font-weight-bold;
-    font-size: fonts.$font-size-small;
+    font-size: fonts.$font-size-less-small;
     letter-spacing: -0.3px;
     color: colors.$text-title;
   }
@@ -51,7 +51,7 @@
     height: 36px;
     color: colors.$gray-line;
     background-color: colors.$brand-primary;
-    font-size: fonts.$font-size-small;
+    font-size: fonts.$font-size-less-small;
     font-weight: fonts.$font-weight-bold;
     font-family: fonts.$font-roboto;
     letter-spacing: -0.3px;
