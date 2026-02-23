@@ -1,0 +1,109 @@
+@use '../../../../../styles/fonts' as fonts;
+@use '../../../../../styles/colors' as colors;
+
+.promo {
+  width: 1440px;
+  height: 701px;
+  display: flex;
+  background-color: colors.$brand-background-soft;
+
+  &__container {
+    width: 593px;
+    height: 456px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-left: 93px;
+    margin-top: 150px;
+  }
+
+  &__text {
+    width: 593px;
+    height: 268px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  &__title {
+    font-family: fonts.$font-roboto;
+    line-height: 80px;
+    letter-spacing: 0.3px;
+    font-size: fonts.$font-size-extra-large;
+    color: colors.$text-title;
+    font-weight: fonts.$font-weight-black;
+  }
+
+  &__message {
+    font-family: fonts.$font-roboto;
+    font-size: fonts.$font-size-small;
+    font-weight: fonts.$font-weight-regular;
+    line-height: 26px;
+    letter-spacing: -0.3px;
+    color: colors.$text-caption;
+  }
+
+  &__list {
+    display: inline-flex;
+    padding-left: 0px;
+    width: 453px;
+    height: 24px;
+    gap: 35px;
+  }
+
+  &__item {
+    font-family: fonts.$font-roboto;
+    font-weight: fonts.$font-weight-bold;
+    font-size: fonts.$font-size-small;
+    line-height: 24px;
+    letter-spacing: -0.3px;
+    color: colors.$text-caption;
+    padding-left: 30px;
+    list-style: none;
+    position: relative;
+
+    &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        right: 10px;
+        top: 7%;
+
+        width: 22px;
+        height: 22px;
+        background-image: url('../../../../../assets/list-style.svg');
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+  }
+
+  &__button {
+    width: 412px;
+    height: 84px;
+    border: 0px;
+    border-radius: 10px;
+    padding: 27px 15px;
+    background-color: colors.$brand-primary;
+    font-family: fonts.$font-roboto;
+    font-weight: fonts.$font-weight-bold;
+    font-size: fonts.$font-size-medium;
+    line-height: 26px;
+    letter-spacing: -0.3px;
+    color: colors.$gray-line;
+    box-shadow: 2px 3px 50px 2px colors.$brand-primary;
+  }
+
+  &__decoration{
+    display: flex;
+    position: absolute;
+    width: 108px;
+    height: 32px;
+    margin-left: 93px;
+    margin-top: 103px;
+  }
+
+  &__image {
+    margin-top: 100px;
+    margin-left: 10px;
+  }
+}
