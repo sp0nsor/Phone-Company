@@ -51,49 +51,16 @@
     gap: 35px;
   }
 
-  &__item {
-    font-family: fonts.$font-roboto;
-    font-weight: fonts.$font-weight-bold;
-    font-size: fonts.$font-size-small;
-    line-height: 24px;
-    letter-spacing: -0.3px;
-    color: colors.$text-caption;
-    padding-left: 30px;
-    list-style: none;
-    position: relative;
-
-    &::before {
-        content: '';
-        position: absolute;
-        left: 0;
-        right: 10px;
-        top: 7%;
-
-        width: 22px;
-        height: 22px;
-        background-image: url('../../../../../assets/list-style.svg');
-        background-size: contain;
-        background-repeat: no-repeat;
-    }
-  }
-
   &__button {
     width: 412px;
     height: 84px;
-    border: 0px;
     border-radius: 10px;
-    padding: 27px 15px;
-    background-color: colors.$brand-primary;
-    font-family: fonts.$font-roboto;
-    font-weight: fonts.$font-weight-bold;
     font-size: fonts.$font-size-medium;
     line-height: 26px;
-    letter-spacing: -0.3px;
-    color: colors.$gray-line;
     box-shadow: 2px 3px 50px 2px colors.$brand-primary;
   }
 
-  &__decoration{
+  &__decoration {
     display: flex;
     position: absolute;
     width: 108px;

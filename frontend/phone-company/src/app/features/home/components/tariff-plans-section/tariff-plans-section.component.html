@@ -1,0 +1,28 @@
+<div class="tariff-plans">
+  <svg-icon src="assets/circle-decoration.svg" class="tariff-plans__circle-decoration"></svg-icon>
+  <div class="tariff-plans__title-box">
+    <div class="tariff-plans__rectangle-decoration"></div>
+    <span class="tariff-plans__title"
+      >We're with you every step, with all the perks you deserve.</span
+    >
+  </div>
+  <div class="tariff-plans__container">
+    <button
+      type="button"
+      class="tariff-plans__arrow tariff-plans__arrow-left"
+      (click)="prevTariff()"
+    >
+      <svg-icon src="assets/arrow.svg"></svg-icon>
+    </button>
+    @for (tariff of displayedTariffs(); track $index) {
+      <app-tariff-card [tariff]="tariff"></app-tariff-card>
+    }
+    <button
+      type="button"
+      class="tariff-plans__arrow tariff-plans__arrow-right"
+      (click)="nextTariff()"
+    >
+      <svg-icon src="assets/arrow.svg"></svg-icon>
+    </button>
+  </div>
+</div>

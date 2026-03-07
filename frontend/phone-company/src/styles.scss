@@ -1,1 +1,37 @@
-/* You can add global styles to this file, and also import other style files */
+@use './styles/colors' as colors;
+@use './styles/fonts' as fonts;
+
+.list-item {
+  font-family: fonts.$font-roboto;
+  font-weight: fonts.$font-weight-bold;
+  font-size: fonts.$font-size-small;
+  line-height: 24px;
+  letter-spacing: -0.3px;
+  color: colors.$text-caption;
+  padding-left: 30px;
+  list-style: none;
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 10px;
+    top: 7%;
+
+    width: 22px;
+    height: 22px;
+    background-image: url('./assets/list-style.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+}
+
+.primary-button {
+  border: 0px;
+  background-color: colors.$brand-primary;
+  font-family: fonts.$font-roboto;
+  font-weight: fonts.$font-weight-bold;
+  letter-spacing: -0.3px;
+  color: colors.$gray-line;
+}

@@ -8,6 +8,4 @@ import { SvgIconComponent } from 'angular-svg-icon';
   styleUrl: './header.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class HeaderComponent {
-  
-}
+export class HeaderComponent {}
