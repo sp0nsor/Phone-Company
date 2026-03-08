@@ -1,0 +1,56 @@
+@use '../../../../styles/colors' as colors;
+@use '../../../../styles/fonts' as fonts;
+.tariff {
+  width: 320px;
+  height: 380px;
+  display: flex;
+  flex-direction: column;
+  background-color: colors.$brand-background-soft;
+  border-radius: 30px;
+  box-shadow: 0px 0px 35px -5px #f7c7c4;
+
+  &__name {
+    width: 280px;
+    height: 30px;
+    margin-top: 20px;
+    margin-left: 40px;
+    margin-bottom: 20px;
+    font-family: fonts.$font-roboto;
+    font-weight: fonts.$font-weight-bold;
+    font-size: 25px;
+    letter-spacing: 1px;
+    color: colors.$text-caption;
+  }
+
+  &__line {
+    width: 320px;
+    height: 2px;
+    background-color: #f7c7c4;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    margin-top: 40px;
+    gap: 20px;
+  }
+
+  &__button {
+    width: 90px;
+    height: 36px;
+    border-radius: 6px;
+    margin-left: 40px;
+    margin-top: auto;
+    margin-bottom: 25px;
+  }
+
+  &__price {
+    margin-top: auto;
+    margin-left: 40px;
+    font-family: fonts.$font-roboto;
+    font-weight: fonts.$font-weight-regular;
+    font-size: 20px;
+    letter-spacing: -0.3px;
+    color: colors.$text-caption;
+  }
+}

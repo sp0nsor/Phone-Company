@@ -1,0 +1,11 @@
+<div class="tariff">
+  <span class="tariff__name">{{ tariff()?.name }}</span>
+  <div class="tariff__line"></div>
+  <ul class="tariff__list">
+    @for (service of tariff()?.services; track $index) {
+      <li class="list-item">{{ service }}</li>
+    }
+  </ul>
+  <span class="tariff__price">price: {{ tariff()?.price }}</span>
+  <button type="button" class="primary-button tariff__button">Add</button>
+</div>

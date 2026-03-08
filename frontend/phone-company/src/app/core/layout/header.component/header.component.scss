@@ -49,13 +49,7 @@
   &__button {
     width: 90px;
     height: 36px;
-    color: colors.$gray-line;
-    background-color: colors.$brand-primary;
     font-size: fonts.$font-size-less-small;
-    font-weight: fonts.$font-weight-bold;
-    font-family: fonts.$font-roboto;
-    letter-spacing: -0.3px;
-    border: none;
     border-radius: 6px;
     box-shadow: 2px 3px 20px 2px colors.$brand-primary;
   }
