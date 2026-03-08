@@ -46,6 +46,9 @@ export class TariffPlansSectionComponent implements OnInit {
   private tariffs = signal<ITariff[]>([]);
   private currentIndex = signal<number>(0);
 
+  private pageIndex = signal<number>(1);
+  private pageCount = signal<number>(0);
+
   private isLoading: boolean = false;
 
   ngOnInit(): void {
@@ -61,7 +64,11 @@ export class TariffPlansSectionComponent implements OnInit {
     const nextIndex = (this.currentIndex() + 1) % length;
     this.currentIndex.set(nextIndex);
 
-    if (this.currentIndex() + this.batchSize >= length - 1) {
+    const hasNextPage = this.pageIndex() < this.pageCount();
+
+    console.log(this.pageIndex(), this.pageCount())
+
+    if (hasNextPage) {
       this.loadTariffs();
     }
   }
@@ -83,13 +90,16 @@ export class TariffPlansSectionComponent implements OnInit {
     }
 
     this.isLoading = true;
-    const offset = this.tariffs().length;
 
     this.tariffsService
-      .getTariffs(offset, this.batchSize)
+      .getTariffs(this.pageIndex(), this.batchSize)
       .pipe(
-        tap((newTariffs) => {
-          this.tariffs.update((current) => [...current, ...newTariffs]);
+        tap((response) => {
+          this.tariffs.update((current) => [...current, ...response.items]);
+
+          this.pageCount.set(response.pageCount);
+          this.pageIndex.update((v) => v + 1);
+
           this.isLoading = false;
         }),
         catchError(() => {

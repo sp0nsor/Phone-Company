@@ -3,7 +3,7 @@
   <div class="tariff__line"></div>
   <ul class="tariff__list">
     @for (service of tariff()?.services; track $index) {
-      <li class="list-item">{{ service }}</li>
+      <li class="list-item">{{ service.name }}</li>
     }
   </ul>
   <span class="tariff__price">price: {{ tariff()?.price }}</span>
